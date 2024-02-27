@@ -24,7 +24,7 @@ class ItemCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(8.0),
               child: Image.network(
                 image,
-                width: MediaQuery.of(context).size.width * 0.45,
+                width: MediaQuery.of(context).size.width * 0.5,
                 height: MediaQuery.of(context).size.width * 0.45,
                 scale: 1,
                 fit: BoxFit.cover,
@@ -47,7 +47,7 @@ class ItemCard extends StatelessWidget {
             margin: EdgeInsets.all(12.0),
             child: OutlinedButton(
               style: OutlinedButton.styleFrom(
-                  backgroundColor: k_secondary,
+                  backgroundColor: k_primary_variant,
                   foregroundColor: k_primary,
                   textStyle: k_txtButton),
               onPressed: () {},
