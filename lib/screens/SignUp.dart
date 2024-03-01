@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taprobuy/color_schemes.g.dart';
+import 'package:taprobuy/screens/LogIn.dart';
 
 import 'Home.dart';
 
@@ -20,7 +21,7 @@ class SignUpState extends State<SignUp> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.all(30.0),
+          margin: const EdgeInsets.all(30.0),
           child: Column(
             children: [
               Padding(
@@ -61,7 +62,7 @@ class SignUpState extends State<SignUp> {
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12.0),
-                      borderSide: BorderSide(color: k_primary,width: 2.0),
+                      borderSide: BorderSide(color: k_primary, width: 2.0),
                     ),
                     hintText: 'yourname@email.com',
                     hintStyle: TextStyle(color: Colors.black38),
@@ -93,7 +94,7 @@ class SignUpState extends State<SignUp> {
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12.0),
-                      borderSide: BorderSide(color: k_primary,width: 2.0),
+                      borderSide: BorderSide(color: k_primary, width: 2.0),
                     ),
                     hintText: '*******',
                     hintStyle: TextStyle(color: Colors.black38),
@@ -104,7 +105,8 @@ class SignUpState extends State<SignUp> {
                 padding: const EdgeInsets.only(top: 50.0),
                 child: FilledButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
                       return Home();
                     }));
                   },
@@ -114,7 +116,6 @@ class SignUpState extends State<SignUp> {
                   style: FilledButton.styleFrom(
                       backgroundColor: k_primary,
                       textStyle: TextStyle(fontSize: 18.0),
-                      maximumSize: Size(380.0, 60.0),
                       minimumSize:
                           Size(MediaQuery.of(context).size.width * 0.9, 60.0)),
                 ),
@@ -124,12 +125,22 @@ class SignUpState extends State<SignUp> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Already have an account?",style: TextStyle(color: Colors.black54,fontSize: 15.0),),
+                    Text(
+                      "Already have an account?",
+                      style: TextStyle(color: Colors.black54, fontSize: 15.0),
+                    ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return LogIn();
+                        }));
+                      },
                       child: Text("Log in"),
-                      style: TextButton.styleFrom( foregroundColor: Colors.black,
-                          textStyle: TextStyle(fontWeight: FontWeight.bold,fontSize: 15.0)),
+                      style: TextButton.styleFrom(
+                          foregroundColor: Colors.black,
+                          textStyle: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 15.0)),
                     )
                   ],
                 ),

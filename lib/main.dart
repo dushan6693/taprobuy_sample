@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:taprobuy/color_schemes.g.dart';
 import 'package:taprobuy/items/ItemCard.dart';
 import 'package:taprobuy/screens/Home.dart';
+import 'package:taprobuy/screens/LogIn.dart';
 import 'package:taprobuy/screens/SignUp.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'taprobuy Demo',
       theme: ThemeData(primaryColor: k_primary, fontFamily: 'poppins'),
-      home: const SignUp(),
+      home: const LogIn(),
     );
   }
 }
