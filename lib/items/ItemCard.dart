@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:taprobuy/color_schemes.g.dart';
 import 'package:taprobuy/items/Styles.dart';
+import 'package:taprobuy/screens/BuyNow.dart';
 
 // list of images
 
@@ -30,28 +31,50 @@ class ItemCard extends StatelessWidget {
                 fit: BoxFit.cover,
               )),
           Container(
-            margin: EdgeInsets.all(3.0),
+            margin: const EdgeInsets.all(3.0),
             child: Text(
               head,
               style: k_txtHeading,
             ),
           ),
           Container(
-            margin: EdgeInsets.all(3.0),
+            margin: const EdgeInsets.all(3.0),
             child: Text(
-              "Rs " + price.toString() + ".00",
+              "Rs $price.00",
               style: k_txtPrice,
             ),
           ),
           Container(
-            margin: EdgeInsets.all(12.0),
+            margin: const EdgeInsets.only(top: 5.0),
+            child: FilledButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) {
+                      return const BuyNow();
+                    }));
+              },
+              style: FilledButton.styleFrom(
+                backgroundColor: k_primary,
+                textStyle: k_txtButton,
+                minimumSize:
+                    Size(MediaQuery.of(context).size.width * 0.4, 45.0),
+              ),
+              child: const Text(
+                "Buy now",
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(top: 5.0),
             child: OutlinedButton(
               style: OutlinedButton.styleFrom(
                   backgroundColor: k_primary_variant,
                   foregroundColor: k_primary,
-                  textStyle: k_txtButton),
+                  textStyle: k_txtButton,
+                  minimumSize:
+                      Size(MediaQuery.of(context).size.width * 0.4, 45.0)),
               onPressed: () {},
-              child: Text("Add to cart"),
+              child: const Text("Add to cart"),
             ),
           )
         ],

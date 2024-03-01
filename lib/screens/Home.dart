@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:taprobuy/items/ItemDrawer.dart';
 
 import '../color_schemes.g.dart';
 import '../items/ItemCard.dart';
@@ -72,52 +72,11 @@ class _HomeState extends State<Home> {
               ))
         ],
       ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: k_primary,
-              ),
-              child: Text(
-                'TaproBuy',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Home'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Settings'),
-              onTap: () {
-                // Navigator.push(context, MaterialPageRoute(builder: (context) {
-                //   return SignUp();
-                // }));
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.group),
-              title: Text('Abot us'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
-      ),
+      drawer: const ItemDrawer(),
       body: GridView(
         scrollDirection: Axis.vertical,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, childAspectRatio: 2 / 3.3),
+            crossAxisCount: 2, childAspectRatio: 2 / 3.7),
         padding: const EdgeInsets.all(5.0),
         children: [
           for (var i = 0; i < headList.length; i++)
