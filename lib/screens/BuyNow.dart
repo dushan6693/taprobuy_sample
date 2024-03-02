@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:taprobuy/items/ItemDrawer.dart';
 
 import '../color_schemes.g.dart';
+import 'Cart.dart';
 
 class BuyNow extends StatefulWidget {
   const BuyNow({super.key});
@@ -43,7 +44,10 @@ class _BuyNowState extends State<BuyNow> {
                 color: k_background,
               )),
           IconButton(
-              onPressed: () {},
+              onPressed: () { Navigator.push(context,
+                  MaterialPageRoute(builder: (context) {
+                    return const Cart();
+                  }));},
               icon: Icon(
                 Icons.local_mall,
                 color: k_background,
@@ -58,8 +62,8 @@ class _BuyNowState extends State<BuyNow> {
         
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 5.0),
+              const Padding(
+                padding: EdgeInsets.only(top: 5.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -74,8 +78,8 @@ class _BuyNowState extends State<BuyNow> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 20.0),
-                child: Text(
+                margin: const EdgeInsets.only(top: 20.0),
+                child: const Text(
                   "SHIPPING ADDRESS",
                   style: TextStyle(
                     fontSize: 20.0,
@@ -84,15 +88,15 @@ class _BuyNowState extends State<BuyNow> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 15.0),
-                child: Text("91/A\nChurch Road,\nGampaha\n11000",style: TextStyle(
+                margin: const EdgeInsets.only(top: 15.0),
+                child: const Text("91/A\nChurch Road,\nGampaha\n11000",style: TextStyle(
                   fontSize: 15.0,
         
                 ),),
               ),
               Container(
-                margin: EdgeInsets.only(top: 25.0),
-                child: Text(
+                margin: const EdgeInsets.only(top: 25.0),
+                child: const Text(
                   "SHIPPING METHOD",
                   style: TextStyle(
                     fontSize: 20.0,
@@ -101,9 +105,9 @@ class _BuyNowState extends State<BuyNow> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 15.0,),
+                margin: const EdgeInsets.only(top: 15.0,),
                 width: MediaQuery.of(context).size.width*0.9,
-                padding: EdgeInsets.only(left: 10.0,right: 10.0,top: 4.0,bottom: 4.0),
+                padding: const EdgeInsets.only(left: 10.0,right: 10.0,top: 4.0,bottom: 4.0),
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.black12,width: 2.0),
                   borderRadius: BorderRadius.circular(12.0),
@@ -112,12 +116,12 @@ class _BuyNowState extends State<BuyNow> {
                 child: DropdownButton<String>(
         
                   value: shipValue,
-                  icon: Icon(Icons.keyboard_arrow_down),
+                  icon: const Icon(Icons.keyboard_arrow_down),
         
                   isExpanded: true,
                   iconSize: 30,
                   elevation: 16,
-                  style: TextStyle(color: Colors.black,fontSize: 18.0), // Text color
+                  style: const TextStyle(color: Colors.black,fontSize: 18.0), // Text color
         
         
                   items: ship_method.map<DropdownMenuItem<String>>((String value) {
@@ -133,8 +137,8 @@ class _BuyNowState extends State<BuyNow> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 25.0),
-                child: Text(
+                margin: const EdgeInsets.only(top: 25.0),
+                child: const Text(
                   "PAYMENT METHOD",
                   style: TextStyle(
                     fontSize: 20.0,
@@ -143,9 +147,9 @@ class _BuyNowState extends State<BuyNow> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 15.0),
+                margin: const EdgeInsets.only(top: 15.0),
                 width: MediaQuery.of(context).size.width*0.9,
-                padding: EdgeInsets.only(left: 10.0,right: 10.0,top: 4.0,bottom: 4.0),
+                padding: const EdgeInsets.only(left: 10.0,right: 10.0,top: 4.0,bottom: 4.0),
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.black12,width: 2.0),
                   borderRadius: BorderRadius.circular(12.0),
@@ -154,12 +158,12 @@ class _BuyNowState extends State<BuyNow> {
                 child: DropdownButton<String>(
         
                   value: payValue,
-                  icon: Icon(Icons.keyboard_arrow_down),
+                  icon: const Icon(Icons.keyboard_arrow_down),
         
                   isExpanded: true,
                   iconSize: 30,
                   elevation: 16,
-                  style: TextStyle(color: Colors.black,fontSize: 18.0), // Text color
+                  style: const TextStyle(color: Colors.black,fontSize: 18.0), // Text color
         
         
                   items: pay_method.map<DropdownMenuItem<String>>((String value) {
@@ -177,8 +181,8 @@ class _BuyNowState extends State<BuyNow> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container( margin:EdgeInsets.only(top: 20.0),child: Text("EST.TOTAL" ,style: TextStyle(fontSize: 18.0,fontWeight: FontWeight.bold),)),
-                  Container(margin:EdgeInsets.only(top: 20.0),child: Text("Rs. ${6000.00.toStringAsFixed(2)}",style: TextStyle(fontSize: 18.0,fontWeight: FontWeight.bold,color: Colors.red),)),
+                  Container( margin:const EdgeInsets.only(top: 20.0),child: const Text("EST.TOTAL" ,style: TextStyle(fontSize: 18.0,fontWeight: FontWeight.bold),)),
+                  Container(margin:const EdgeInsets.only(top: 20.0),child: Text("Rs. ${6000.00.toStringAsFixed(2)}",style: TextStyle(fontSize: 18.0,fontWeight: FontWeight.bold,color: Colors.red),)),
                 ],
               ),
               Padding(
@@ -190,14 +194,14 @@ class _BuyNowState extends State<BuyNow> {
                     //       return Home();
                     //     }));
                   },
-                  child: Text(
-                    "Place Order",
-                  ),
                   style: FilledButton.styleFrom(
                       backgroundColor: k_primary,
-                      textStyle: TextStyle(fontSize: 18.0),
+                      textStyle: const TextStyle(fontSize: 18.0),
                       minimumSize:
                       Size(MediaQuery.of(context).size.width * 0.9, 60.0)),
+                  child: const Text(
+                    "Place Order",
+                  ),
                 ),
               ),
             ],

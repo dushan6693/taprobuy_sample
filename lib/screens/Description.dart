@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:taprobuy/color_schemes.g.dart';
 
+import 'Cart.dart';
+
 class Description extends StatefulWidget {
   final String imgLink;
   final String heading;
@@ -52,7 +54,11 @@ class DescriptionState extends State<Description> {
                 color: k_background,
               )),
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const Cart();
+                }));
+              },
               icon: Icon(
                 Icons.local_mall,
                 color: k_background,
@@ -61,7 +67,7 @@ class DescriptionState extends State<Description> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.only(top: 10.0),
+          margin: const EdgeInsets.only(top: 10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -70,43 +76,44 @@ class DescriptionState extends State<Description> {
                 width: MediaQuery.of(context).size.width * 1.0,
               ),
               Container(
-                margin: EdgeInsets.all(30.0),
+                margin: const EdgeInsets.all(30.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                        child: Text(
+                    Text(
                       heading,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 26.0, fontWeight: FontWeight.bold),
-                    )),
+                    ),
                     Container(
-                        margin: EdgeInsets.only(top: 5.0),
-                        child: Text(
+                        margin: const EdgeInsets.only(top: 5.0),
+                        child: const Text(
                           "By Nipun jayawardhena",
-                          style: TextStyle(
-                              fontSize: 18.0, color: Colors.black87),
+                          style:
+                              TextStyle(fontSize: 18.0, color: Colors.black87),
                         )),
                     Container(
-                      margin: EdgeInsets.only(top: 15.0),
+                        margin: const EdgeInsets.only(top: 15.0),
                         child: Text(
                           "Rs. $price.00",
                           style: TextStyle(
-                              fontSize: 25.0, fontWeight: FontWeight.bold,color: k_primary),
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.bold,
+                              color: k_primary),
                         )),
                     Container(
-                        margin: EdgeInsets.only(top: 20.0),
-                        child: Text(
+                        margin: const EdgeInsets.only(top: 20.0),
+                        child: const Text(
                           "Description of product",
                           style: TextStyle(
                               fontSize: 20.0, fontWeight: FontWeight.bold),
                         )),
                     Container(
-                        margin: EdgeInsets.only(top: 10.0),
-                        child: Text(
+                        margin: const EdgeInsets.only(top: 10.0),
+                        child: const Text(
                           "This is a sample description about this pcture.This is a sample description about this pcture.This is a sample description about this pcture.This is a sample description about this pcture.",
-                          style: TextStyle(
-                              fontSize: 18.0,color: Colors.black87),
+                          style:
+                              TextStyle(fontSize: 18.0, color: Colors.black87),
                         )),
                   ],
                 ),

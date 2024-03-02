@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:taprobuy/items/ItemDrawer.dart';
-
 import '../color_schemes.g.dart';
 import '../items/ItemCard.dart';
 import 'Cart.dart';
-import 'SignUp.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -54,8 +52,6 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    var imgCount = imgList.length;
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
@@ -82,10 +78,9 @@ class _HomeState extends State<Home> {
               )),
           IconButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) {
-                      return const Cart();
-                    }));
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const Cart();
+                }));
               },
               icon: Icon(
                 Icons.local_mall,

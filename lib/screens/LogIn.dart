@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:taprobuy/color_schemes.g.dart';
 import 'package:taprobuy/screens/SignUp.dart';
 
@@ -25,7 +24,7 @@ class LogInState extends State<LogIn> {
 
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.all(30.0),
+          margin: const EdgeInsets.all(30.0),
           child: Column(
             children: [
               Padding(
@@ -57,19 +56,19 @@ class LogInState extends State<LogIn> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(bottom: 10.0),
+                padding: const EdgeInsets.only(bottom: 10.0),
                 child: TextField(
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12.0),
-                      borderSide: BorderSide(color: Colors.black12, width: 2.0),
+                      borderSide: const BorderSide(color: Colors.black12, width: 2.0),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12.0),
                       borderSide: BorderSide(color: k_primary, width: 2.0),
                     ),
                     hintText: 'yourname@email.com',
-                    hintStyle: TextStyle(color: Colors.black38),
+                    hintStyle: const TextStyle(color: Colors.black38),
                   ),
                 ),
               ),
@@ -88,20 +87,20 @@ class LogInState extends State<LogIn> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(bottom: 10.0),
+                padding: const EdgeInsets.only(bottom: 10.0),
                 child: TextField(
                   obscureText: true,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12.0),
-                      borderSide: BorderSide(color: Colors.black12, width: 2.0),
+                      borderSide: const BorderSide(color: Colors.black12, width: 2.0),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12.0),
                       borderSide: BorderSide(color: k_primary, width: 2.0),
                     ),
                     hintText: '*******',
-                    hintStyle: TextStyle(color: Colors.black38),
+                    hintStyle: const TextStyle(color: Colors.black38),
                   ),
                 ),
               ),
@@ -111,17 +110,17 @@ class LogInState extends State<LogIn> {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return Home();
+                      return const Home();
                     }));
                   },
-                  child: Text(
-                    "Log In",
-                  ),
                   style: FilledButton.styleFrom(
                       backgroundColor: k_primary,
-                      textStyle: TextStyle(fontSize: 18.0),
+                      textStyle: const TextStyle(fontSize: 18.0),
                       minimumSize:
                           Size(MediaQuery.of(context).size.width * 0.9, 60.0)),
+                  child: const Text(
+                    "Log In",
+                  ),
                 ),
               ),
               Padding(
@@ -129,7 +128,7 @@ class LogInState extends State<LogIn> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "Don't have an account?",
                       style: TextStyle(color: Colors.black54, fontSize: 15.0),
                     ),
@@ -137,14 +136,14 @@ class LogInState extends State<LogIn> {
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return SignUp();
+                          return const SignUp();
                         }));
                       },
-                      child: Text("Sign Up"),
                       style: TextButton.styleFrom(
                           foregroundColor: Colors.black,
-                          textStyle: TextStyle(
+                          textStyle: const TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 15.0)),
+                      child: const Text("Sign Up"),
                     )
                   ],
                 ),

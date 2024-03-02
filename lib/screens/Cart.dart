@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../color_schemes.g.dart';
-import '../items/ItemCard.dart';
 import '../items/ItemCart.dart';
 
 class Cart extends StatefulWidget {
@@ -82,7 +80,7 @@ class _CartState extends State<Cart> {
       ),
       body: Column(
         children: [
-          Text("CART",style: TextStyle(fontSize: 28.0,fontWeight: FontWeight.bold),),
+          const Text("CART",style: TextStyle(fontSize: 28.0,fontWeight: FontWeight.bold),),
           Expanded(
             child: GridView(
               scrollDirection: Axis.vertical,
@@ -105,14 +103,14 @@ class _CartState extends State<Cart> {
               onPressed: () {
 
               },
-              child: Text(
-                "Proceed To Checkout",
-              ),
               style: FilledButton.styleFrom(
                   backgroundColor: k_primary,
-                  textStyle: TextStyle(fontSize: 18.0),
+                  textStyle: const TextStyle(fontSize: 18.0),
                   minimumSize:
                   Size(MediaQuery.of(context).size.width * 0.7, 50.0)),
+              child: const Text(
+                "Proceed To Checkout",
+              ),
             ),
           ),
         ],
