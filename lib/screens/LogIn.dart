@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:taprobuy/color_schemes.g.dart';
 import 'package:taprobuy/screens/SignUp.dart';
 
@@ -14,11 +15,14 @@ class LogIn extends StatefulWidget {
 class LogInState extends State<LogIn> {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: Text("TaproBuy", style: TextStyle(color: k_background)),
         backgroundColor: k_primary,
+        centerTitle: true,
       ),
+
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.all(30.0),

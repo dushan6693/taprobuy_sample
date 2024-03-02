@@ -18,6 +18,7 @@ class SignUpState extends State<SignUp> {
       appBar: AppBar(
         title: Text("TaproBuy", style: TextStyle(color: k_background)),
         backgroundColor: k_primary,
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Container(
