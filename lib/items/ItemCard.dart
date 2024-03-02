@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:taprobuy/color_schemes.g.dart';
 import 'package:taprobuy/items/Styles.dart';
 import 'package:taprobuy/screens/BuyNow.dart';
+import 'package:taprobuy/screens/Description.dart';
 
 // list of images
 
@@ -23,12 +24,22 @@ class ItemCard extends StatelessWidget {
         children: [
           ClipRRect(
               borderRadius: BorderRadius.circular(8.0),
-              child: Image.network(
-                image,
-                width: MediaQuery.of(context).size.width * 0.5,
-                height: MediaQuery.of(context).size.width * 0.45,
-                scale: 1,
-                fit: BoxFit.cover,
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) {
+                        return Description(imgLink: image, heading: head, price: price,);
+                      }));
+                },
+                child: Image.network(
+
+                  image,
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  height: MediaQuery.of(context).size.width * 0.45,
+                  scale: 1,
+                  fit: BoxFit.cover,
+
+                ),
               )),
           Container(
             margin: const EdgeInsets.all(3.0),
@@ -73,12 +84,15 @@ class ItemCard extends StatelessWidget {
                   textStyle: k_txtButton,
                   minimumSize:
                       Size(MediaQuery.of(context).size.width * 0.4, 45.0)),
-              onPressed: () {},
+              onPressed: () {
+
+              },
               child: const Text("Add to cart"),
             ),
           )
         ],
       ),
+
     );
   }
 }

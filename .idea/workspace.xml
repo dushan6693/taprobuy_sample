@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89c3692a-db91-46c4-bdc6-43d9a47b67cd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/items/ItemCart.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/Cart.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/Description.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/0a2492481ec8f01d167a1bd190733e25/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/0a2492481ec8f01d167a1bd190733e25/.filecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/0a2492481ec8f01d167a1bd190733e25/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/0a2492481ec8f01d167a1bd190733e25/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/0a2492481ec8f01d167a1bd190733e25/debug_android_application.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/0a2492481ec8f01d167a1bd190733e25/debug_android_application.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/0a2492481ec8f01d167a1bd190733e25/flutter_assets.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/0a2492481ec8f01d167a1bd190733e25/flutter_assets.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/0a2492481ec8f01d167a1bd190733e25/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/0a2492481ec8f01d167a1bd190733e25/kernel_snapshot.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/0a2492481ec8f01d167a1bd190733e25/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/0a2492481ec8f01d167a1bd190733e25/kernel_snapshot.stamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/items/ItemCard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/items/ItemCard.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/BuyNow.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/BuyNow.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/Home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/Home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/LogIn.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/LogIn.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/SignUp.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/SignUp.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

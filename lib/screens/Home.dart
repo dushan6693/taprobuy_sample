@@ -3,6 +3,7 @@ import 'package:taprobuy/items/ItemDrawer.dart';
 
 import '../color_schemes.g.dart';
 import '../items/ItemCard.dart';
+import 'Cart.dart';
 import 'SignUp.dart';
 
 class Home extends StatefulWidget {
@@ -80,7 +81,12 @@ class _HomeState extends State<Home> {
                 color: k_background,
               )),
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) {
+                      return const Cart();
+                    }));
+              },
               icon: Icon(
                 Icons.local_mall,
                 color: k_background,
