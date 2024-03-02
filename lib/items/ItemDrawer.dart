@@ -30,15 +30,15 @@ class _ItemDrawerState extends State<ItemDrawer> {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Home'),
+            leading: Icon(Icons.account_circle),
+            title: Text('Profile'),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Settings'),
+            leading: Icon(Icons.list),
+            title: Text('Orders'),
             onTap: () {
               // Navigator.push(context, MaterialPageRoute(builder: (context) {
               //   return SignUp();
@@ -46,8 +46,22 @@ class _ItemDrawerState extends State<ItemDrawer> {
             },
           ),
           ListTile(
-            leading: Icon(Icons.group),
-            title: Text('Abot us'),
+            leading: Icon(Icons.notifications),
+            title: Text('Email notification'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.location_on),
+            title: Text('Shipping address'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.lock),
+            title: Text('Password'),
             onTap: () {
               Navigator.pop(context);
             },
